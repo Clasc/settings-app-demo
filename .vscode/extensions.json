@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "stylelint.vscode-stylelint"
+    ],
+
+     "unwantedRecommendations": [
+        "burkeholland.simple-react-snippets"
+    ]
+}
