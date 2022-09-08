@@ -9,10 +9,34 @@
             "type": "node",
             "program": "${workspaceFolder}/node_modules/jest/bin/jest",
             "request": "launch",
+            "args": [
+                "--verbose",
+                "-i",
+                "--no-cache",
+                "--watchAll"
+            ],
             "cwd": "${workspaceRoot}",
             "env": {"NODE_ENV":"test"},
             "internalConsoleOptions": "openOnSessionStart",
-            "console": "integratedTerminal",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+        },
+        {
+            "name": "Debug current file",
+            "type": "node",
+            "program": "${workspaceFolder}/node_modules/jest/bin/jest",
+            "request": "launch",
+            "args": [
+                "${fileBasename}",
+                "--verbose",
+                "-i",
+                "--no-cache",
+                "--watchAll"
+            ],
+            "cwd": "${workspaceRoot}",
+            "env": {"NODE_ENV":"test"},
+            "internalConsoleOptions": "openOnSessionStart",
             "skipFiles": [
                 "<node_internals>/**"
             ],
